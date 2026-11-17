@@ -1,0 +1,85 @@
+{
+    "document_id_mapping_file": "data/mappings/document_id_mapping.json",
+    "document_name_mapping_file": "data/mappings/document_name_mapping.json",
+    "raw_documents_dir": "data/raw_documents",
+    "converted_documents_dir": "data/converted_documents",
+    "processed_documents_dir": "data/converted_documents",
+    "document_images_dir": "data/documents_images",
+    "table_debug_dir": "data/table_debugging",
+    "figure_debug_dir": "data/figure_debugging",
+    "chunk_storage_path": "data/chunk_data",
+    "CONVERTIBLE_TYPES": [
+        ".docx",
+        ".doc",
+        ".pptx",
+        ".ppt",
+        ".odt",
+        ".odp"
+    ],
+    "IMAGE_TYPES": [
+        ".png",
+        ".jpg",
+        ".jpeg"
+    ],
+    "EXCEL_TYPES": [
+        ".xlsx",
+        ".xls",
+        ".ods"
+    ],
+    "CSV_TYPES": [
+        ".csv"
+    ],
+    "pdf_render_dpi": 300,
+    "ocr_type": "EasyOCR",
+    "ocr_language": "en",
+    "ocr_use_angle_cls": true,
+    "enable_ocr_correction": true,
+    "layout_model": "doclayout-yolo",
+    "layout_model_path": "models/layout/doclayout_yolo_ft.pt",
+    "layout_confidence_threshold": 0.25,
+    "iou_threshold": 0.6,
+    "TEXT_ELEMENT_TYPES": [
+        "plain text",
+        "title",
+        "header",
+        "footer",
+        "figure_caption",
+        "table_caption",
+        "formula_caption",
+        "formula",
+        "isolate_formula"
+    ],
+    "generate_element_description": [
+        "formula",
+        "isolate_formula"
+    ],
+    "vlm_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "embedding_model_path": "models/embeddings/bge-base-en-v1.5",
+    "reranker_model_path": "models/rerankers/bge-reranker-base",
+    "llm_model": "openai/gpt-oss-120b",
+    "chroma_db_path": "data/embedding_storage/chroma",
+    "bm25_index_path": "data/embedding_storage/bm25/bm25_index.json",
+    "collection_name": "documents",
+    "chunking": {
+        "target_chunk_size": 200,
+        "min_chunk_size": 100,
+        "overlap_size": 20
+    },
+    "retrieval_type": "dense",
+    "retrieval_k": 10,
+    "reranking_k": 7,
+    "context_max_chunks": 7,
+    "response_mode": "precise",
+    "conversation_max_history": 5,
+    "enable_query_rewriting": true,
+    "reset_knowledge_base_folders": [
+        "data/chunk_data",
+        "data/mappings",
+        "data/raw_documents",
+        "data/converted_documents",
+        "data/documents_images",
+        "data/table_debugging",
+        "data/figure_debugging",
+        "data/embedding_storage"
+    ]
+}

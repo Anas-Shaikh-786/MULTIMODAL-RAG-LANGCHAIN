@@ -1,0 +1,6 @@
+/data
+/models
+/Notebooks
+.streamlit/secrets.toml
+.env
+__pycache__/
